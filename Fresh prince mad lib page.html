@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='css/style.css' type="text/css" rel='stylesheet' />
+    <link id="themeStyleSheet" href='css/dark.css' type="text/css" rel='stylesheet' />
+  </head>
+
+  <header>
+<!-- h1 has been wrapped in class name of purpleglow to be stylised a glowing animation in css stylsheet  -->
+    <div class="purpleglow">
+    <h1>Fresh Prince</h1>
+<!-- This button has been given an id called themeSwitcher, allowing Javascript to apply the rules specified to this button-->
+  <button id="themeSwitcher">light</button>
+</div>
+</header>
+  <body>
+<!-- Within the verse, span elements have been put in place as a container for local storage, this mean  the input from the formboxes will be put into the correct spaces. The span elements have been given an id in order for javascript to retrive the correct input-->
+<!-- The p element has been given a certain class name in order to stylise their span elements. If it wasent wrapped in a specific class name the CSS would recognise all span elements as the same therefore specific colours could not be applied. -->
+<!-- br elements have been added to create page breaks = breaks in the verse. This helps the user to sing along on time-->
+<p class="freshprincep"> Now this is the story all about how
+My life got flipped, turned upside down
+And I'd like to take a minute, just sit right there
+I'll tell you how I became the prince of a town called <span id="A made up town"></span><br>
+In West <span id="A made up county"></span> born and raised<br><br>
+On the playground is where I spent most of my days<br><br>
+Chilling out, maxing, relaxing all cool<br><br>
+And all shooting some <span id="Activity"></span> outside of the school<br>
+When a couple of guys, who we're up to no good<br><br>
+Started making trouble in my neighbourhood<br><br>
+I got in one little fight and my mom got scared<br><br>
+And said, you're moving with your aunty and uncle in <span id="Another made up town"></span> </p>
+
+<!-- Audio elements have been used so the user can sing along to their song. There are two audio source files in case that the browser does not support one.https://www.w3schools.com/html/html5_audio.asp -->
+<div class="audio">
+<audio controls>
+  <source src="./Audio/fresh prince.ogg" type="audio/ogg">
+  <source src="./Audio/fresh prince.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+</div>
+<!-- button 3 divs have been wrapped in div = bottombuttons in order to stylise space between them-->
+<div class="bottombuttons">
+    <a href="Fresh prince fill in page.html" class="button3">Back</a>
+    <a href="Menu page.html" class="button3">Start again </a>
+</div>
+
+<script>
+// toggle the theme
+// switching the stylesheet for the second link
+// changing the label on the button
+
+switchTheme = (targetTheme) => {
+
+  localStorage.setItem("theme", targetTheme);
+  if (targetTheme == "dark") {
+     document
+     .getElementById("themeStyleSheet")
+     .setAttribute("href", "css/dark.css");
+     document.getElementById("themeSwitcher").textContent = "light";
+
+  } else {
+     document
+     .getElementById("themeStyleSheet")
+     .setAttribute("href", "css/light.css");
+
+  document.getElementById("themeSwitcher").textContent = "dark";
+}
+};
+
+if(localStorage.getItem("theme")){
+  switchTheme(localStorage.getItem("theme"));
+}
+
+handleThemeSwitch = () => {
+
+let targetTheme = document.getElementById("themeSwitcher").textContent;
+switchTheme(targetTheme);
+}
+// detect a click on the button
+document
+ .getElementById("themeSwitcher")
+ .addEventListener("click", handleThemeSwitch);
+
+ // detect a click on the button
+ document
+  .getElementById("themeSwitcher")
+  .addEventListener("click", handleThemeSwitch);
+
+// tells local storage to retrive the id from the formboxes and put them into the corresponding span id elements
+  let amadeuptown = localStorage.getItem("A made up town");
+  document.getElementById("A made up town").textContent = amadeuptown;
+
+  let amadeupcounty = localStorage.getItem("A made up county");
+  document.getElementById("A made up county").textContent = amadeupcounty;
+
+  let activity = localStorage.getItem("Activity");
+  document.getElementById("Activity").textContent = activity;
+
+  let anothermadeuptown = localStorage.getItem("Another made up town");
+  document.getElementById("Another made up town").textContent = anothermadeuptown;
+
+ </script>
+
+  </body>
+</html>
