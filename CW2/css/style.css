@@ -1,0 +1,310 @@
+body{
+height: 100vh;
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center center;
+font-family: sans-serif;
+background-color: black;
+}
+
+h1 {
+display: inline;
+}
+
+.button1{
+  background-color: black;
+    border: white;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    margin: auto;
+    width: 90%;
+    cursor: pointer;
+    position: relative;
+}
+
+header {
+  height: 100px;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* Media queries have been used so that the content in the game is responsive to different screen sizes https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* This set of queries is responsive for tablet screen sizes */
+@media only screen and (min-width:600px) {
+.SongTitles{
+  margin: auto;
+  width: 100%;
+}
+
+form{
+  margin: auto;
+  width: 100%;
+}
+
+.formBox{
+  font-size: 30px;
+}
+
+.shaggyp{
+  font-size: 30px;
+}
+
+.jessiejp{
+  font-size: 30px;
+}
+
+.freshprincep{
+  font-size: 30px;
+}
+
+.button1{
+  font-size: 50px;
+}
+
+}
+
+
+/* This set of queries is responsive for desktop screen sizes  */
+@media only screen and (min-width:768px) {
+
+form{
+  margin: auto;
+  width: 100%;
+}
+
+.formBox{
+  font-size: 40px;
+}
+
+.shaggyp{
+  font-size: 40px;
+}
+
+.jessiejp{
+  font-size: 40px;
+}
+
+.freshprincep{
+  font-size: 30px;
+}
+}
+
+/* The title on the menu page has been stylised to have a glowing animation, the animation will ease in and out alternating between  a yellow - orange tone.  https://www.w3schools.com/howto/howto_css_glowing_text.asp */
+.glow {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+/* The use of keyframes makes the glowing pattern gradual. Orange and yellow keyframes have been intertwined through the use of two text shadow colours that a different variations of gold.  */
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff8200, 0 0 40px #ff8200, 0 0 50px #ff8200, 0 0 60px #ff8200, 0 0 70px #ff8200;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #fdb302, 0 0 40px #fdb302, 0 0 50px #fdb302, 0 0 60px #fdb302, 0 0 70px #fdb302, 0 0 80px #fdb302;
+  }
+}
+
+/*The jessie J bang bang fill in and mad lib pages titles have been stylised to have the same glow effect except with pink this time, the animation will ease in and out alternating between 2 pink shades */
+.pinkglow {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: pinkglow 1s ease-in-out infinite alternate;
+  -moz-animation: pinkglow 1s ease-in-out infinite alternate;
+  animation: pinkglow 1s ease-in-out infinite alternate;
+}
+/*The Keyframes purposely increase by 10px to make the glow effect gradually stronger.*/
+@-webkit-keyframes pinkglow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+/*The fresh prince fill in and filled in lib pages titles have been stylised to have the same glow effect except with purple this time, the animation will ease in and out alternating between 2 purple shades */
+.purpleglow {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: purpleglow 1s ease-in-out infinite alternate;
+  -moz-animation: purpleglow 1s ease-in-out infinite alternate;
+  animation: purpleglow 1s ease-in-out infinite alternate;
+}
+/*The Keyframes purposely increase by 10px each time to make the glow effect gradually stronger.*/
+
+@-webkit-keyframes purpleglow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #8300ff, 0 0 40px #8300ff, 0 0 50px #8300ff, 0 0 60px #8300ff, 0 0 70px #8300ff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ab00ff, 0 0 40px #ab00ff, 0 0 50px #ab00ff, 0 0 60px #ab00ff, 0 0 70px #ab00ff, 0 0 80px #ab00ff;
+  }
+}
+
+/*Same goes for the titles on the shaggy it wasent me fill in and mad lib page */
+.blueglow {
+  font-size: 25px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: blueglow 1s ease-in-out infinite alternate;
+  -moz-animation: blueglow 1s ease-in-out infinite alternate;
+  animation: blueglow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes blueglow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #00cdff, 0 0 40px #00cdff, 0 0 50px #00cdff, 0 0 60px #00cdff, 0 0 70px #00cdff;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #00acff, 0 0 40px #00acff, 0 0 50px #00acff, 0 0 60px #00acff, 0 0 70px #00acff, 0 0 80px #00acff;
+  }
+}
+
+.SongTitles {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0;
+  top: 100px;
+  justify-content: space-around;
+
+}
+
+/* Each button has been stylised with a specific text shadow colour that matches its corresponding pages in this case its pink https://www.w3schools.com/cssref/css3_pr_text-shadow.asp */
+.jessiejbutton{
+  text-shadow: 0 0 20px #ff00ac;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  align-content: center;
+}
+
+/* Each button has been stylised with a specific text shadow colour that matches its corresponding pages in this case its blue https://www.w3schools.com/cssref/css3_pr_text-shadow.asp */
+.shaggybutton{
+  text-shadow: 0 0 20px #00cdff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  align-content: center;
+}
+
+/* Each button has been stylised with a specific text shadow colour that matches its corresponding pages in this case its purple https://www.w3schools.com/cssref/css3_pr_text-shadow.asp */
+.freshprincebutton{
+  text-shadow: 0 0 20px #a600ff;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  cursor: pointer;
+  align-content: center;
+}
+
+  .button{
+  color: white;
+  padding: 15px 0px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 30px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: 2px solid white;
+  align-content: center;
+  width: 100%;
+}
+
+
+.button3{
+color: white;
+padding: 8px 8px;
+text-align: center;
+text-decoration: none;
+display: inline-block;
+font-size: 20px;
+margin: 4px 2px;
+cursor: pointer;
+border-radius: 5px;
+border: 2px solid white;
+align-content: center;
+bottom: 0;
+background-color: black;
+}
+
+
+.bottombuttons{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 20px;
+}
+/* The formboxes have been stylised with an 80px margin on the top to provide space between it and the titles */
+.formBox{
+  margin-top: 80px;
+}
+
+
+/* All span elements have been stylised with a certain colour to match the glowing header on its page. The jessie j mad lib page has been given pink colour span elements*/
+.jessiejp span{
+  color: #c6399d;
+}
+/*The span elements on the fresh prince mad lip page have been stylised to be purple*/
+.freshprincep span{
+  color: #8300ff;
+}
+/*The span elements on the shaggy it wasent me filled in page have been stylised to be blue*/
+.shaggyp span{
+  color: #00cdff;
+}
+
+p {
+  bottom: 0;
+  top: 130px;
+  justify-content: space-between;
+  font-size: 25px;
+  text-align: center;
+}
+
+.freshprincep{
+  font-size: 25px;
+  text-align: : center;
+}
+
+/* A logo has been designed for the game therefore has been stylised as the background image to fill the home page */
+.background-image{
+  background-image: url("../Images/Homescreen.jpg");
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: black;
+  max-width: 100%;
+}
+
+.audio{
+  margin: 10px auto;
+  width: 320px;
+}

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href='css/style.css' type="text/css" rel='stylesheet' />
+    <link id="themeStyleSheet" href='css/dark.css' type="text/css" rel='stylesheet' />
+  </head>
+
+  <header>
+    <!-- h1 has been wrapped in class name of blueglow to be stylised a glowing animation in css stylsheet  -->
+    <div class="blueglow">
+    <h1>Fill in the blanks...</h1>
+<!-- This button has been given an id called themeSwitcher, allowing Javascript to apply the rules specified to this button-->
+  <button id="themeSwitcher">light</button>
+</div>
+</header>
+
+  <body>
+    <form>
+
+<!-- form html has been used to allow users to fill in the suggested words, the input for each form box has been given an id element to tell local storage to save it https://www.w3schools.com/html/tryit.asp?filename=tryhtml_form_submit -->
+      <div class="formBox">
+           <label for="NameofCeleb">Name of Celeb</label>
+           <input type="text" id="NameofCeleb" placeholder=""/>
+       </div>
+
+       <div class="formBox">
+           <label for="NameofSecondCeleb">Name of second Celeb</label>
+           <input type="text" id="NameofSecondCeleb" placeholder=""/>
+       </div>
+
+       <div class="formBox">
+           <label for="Verb">Verb</label>
+           <input type="text" id="Verb" placeholder=""/>
+       </div>
+
+       <div class="formBox">
+           <label for="Object">Object</label>
+           <input type="text" id="Object" placeholder=""/>
+       </div>
+
+       <div class="formBox">
+           <label for="NameofThirdCeleb">Name of third Celeb</label>
+           <input type="text" id="NameofThirdCeleb" placeholder=""/>
+       </div>
+</form>
+<!-- button 3 divs have been wrapped in div = bottombuttons in order to stylise space between them-->
+<div class="bottombuttons">
+<a href="Menu page.html" class="button3">Back</a>
+<a id="btn" class="button3">
+    Go!
+</a>
+</div>
+
+
+<script>
+// toggle the theme
+// switching the stylesheet for the second link
+// changing the label on the button
+
+switchTheme = (targetTheme) => {
+
+  localStorage.setItem("theme", targetTheme);
+  if (targetTheme == "dark") {
+     document
+     .getElementById("themeStyleSheet")
+     .setAttribute("href", "css/dark.css");
+     document.getElementById("themeSwitcher").textContent = "light";
+
+  } else {
+     document
+     .getElementById("themeStyleSheet")
+     .setAttribute("href", "css/light.css");
+
+  document.getElementById("themeSwitcher").textContent = "dark";
+}
+};
+
+if(localStorage.getItem("theme")){
+  switchTheme(localStorage.getItem("theme"));
+}
+
+handleThemeSwitch = () => {
+
+let targetTheme = document.getElementById("themeSwitcher").textContent;
+switchTheme(targetTheme);
+}
+// detect a click on the button
+document
+ .getElementById("themeSwitcher")
+ .addEventListener("click", handleThemeSwitch);
+
+
+logResponses = () => {
+  // get all the things in the input text boxes and save them in localstorage
+
+  let nameOfCeleb = document.getElementById("NameofCeleb").value;
+  console.log(nameOfCeleb);
+  localStorage.setItem("NameOfCeleb", nameOfCeleb);
+
+  let nameOfsecondCeleb = document.getElementById("NameofSecondCeleb").value;
+  console.log(nameOfsecondCeleb);
+  localStorage.setItem("NameOfSecondCeleb", nameOfsecondCeleb);
+
+  let verb = document.getElementById("Verb").value;
+  console.log(verb);
+  localStorage.setItem("Verb", verb);
+
+  let object = document.getElementById("Object").value;
+  console.log(object);
+  localStorage.setItem("Object", object);
+
+  let nameOfthirdCeleb = document.getElementById("NameofThirdCeleb").value;
+  console.log(nameOfthirdCeleb);
+  localStorage.setItem("NameOfThirdCeleb", nameOfthirdCeleb);
+
+  // go to the lyrics page
+  window.location.href = "Shaggy It Wasent Me filled in page.html";
+}
+
+
+document.getElementById("btn").addEventListener("click", logResponses);
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  color: white;
+}
+title {
+  color: white;
+  text-align: center;
+}
+.button{
+color: white;
+border: 2px solid white;
+/* Only style properties that change when switched to the dark colour theme have been written out, this way the javascript grabs from the main style.css stylesheet first then depending on which theme is chosen it then applies the differences */

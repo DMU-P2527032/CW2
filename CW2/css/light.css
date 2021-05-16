@@ -1,0 +1,35 @@
+body {
+  background-color: white;
+  color: black;
+}
+title {
+  color: white;
+  text-align: center;
+}
+.button{
+color: black;
+border: 2px solid black;
+}
+
+.jessiejbutton{
+  border: 2px solid black;
+}
+
+.shaggybutton{
+  border: 2px solid black;
+}
+
+.freshprincebutton{
+  border: 2px solid black;
+}
+
+.button3 {
+color: black;
+border-color: black;
+background-color: white;
+
+}
+
+/* The purpose of creating a toggle switch theme is to make the webiste more accessible for users. Allowing the user to change the colour theme to a light or a dark theme based on thier preference makes the website easier to read and interpret */
+
+/* Only style properties that change when switched to the light colour theme have been written here, this way the html grabs from the main style.css stylesheet first then applies the differences*/ 
